@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+const getTitle = (title) => {
+  return title;
+}
+
+const newSentence = (input) => {
+  return (`This is a new sentence with ${input} in it`);
+}
+
+const newArray = ['this', 'is', 'an', 'array', 1, 2, 3]
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello {getTitle('React')}</h1>
+      <label htmlFor="search">Search: </label>
+      <input id="search" type="text"></input>
+      <h2>{newSentence(Math.ceil(Math.random() * 7))}</h2>
+      <h3>{newArray}</h3>
     </div>
   );
 }
