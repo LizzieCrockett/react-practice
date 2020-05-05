@@ -1,25 +1,46 @@
 import React from 'react';
 import './App.css';
 
-const getTitle = (title) => {
-  return title;
-}
-
-const newSentence = (input) => {
-  return (`This is a new sentence with ${input} in it`);
-}
-
-const newArray = ['this', 'is', 'an', 'array', 1, 2, 3]
-
+const list = [
+  {
+    title: 'React',
+    url: 'https://reactjs.org/',
+    author: 'Jordan Walke',
+    num_comments: 3,
+    points: 4,
+    objectID: 0,
+  },
+  {
+    title: 'Redux',
+    url: 'https://reduxjs.org/',
+    author: 'Dan Abramov, Andrew Clark',
+    num_comments: 2,
+    points: 5,
+    objectID: 1,
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello {getTitle('React')}</h1>
+      <h1>My Hacker Stories</h1>
+
       <label htmlFor="search">Search: </label>
       <input id="search" type="text"></input>
-      <h2>{newSentence(Math.ceil(Math.random() * 7))}</h2>
-      <h3>{newArray}</h3>
+
+      <hr />
+
+      {list.map((item) => {
+        return (
+          <div key={item.objectID}>
+            <span><a href={item.url}>{item.title} </a></span>
+            <span>written by {item.author} </span>
+            <span>{item.num_comments} </span>
+            <span>{item.points}</span>
+          </div>
+        );
+      })}
+
     </div>
   );
 }
