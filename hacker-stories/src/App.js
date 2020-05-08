@@ -20,26 +20,50 @@ const list = [
   },
 ];
 
+const List = () => {
+  return list.map((item) => {
+    return (
+      <div key={item.objectID}>
+        <span><a href={item.url}>{item.title} </a></span>
+        <span>written by {item.author} </span>
+        <span>{item.num_comments} </span>
+        <span>{item.points}</span>
+      </div>
+    );
+  })
+};
+
+const SearchButton = () => {
+  return (
+    <button id="searchButton">This is where you search</button>
+  )
+};
+
+const Search = () => {
+  return (
+    <div id="searchBar">
+      <label htmlFor="search">Search: </label>
+      <input id="search" type="text"></input>
+      <SearchButton />
+    </div>
+  );
+}
+
+const Title = () => {
+  return (
+    <h1>My Hacker Stories</h1>
+  );
+}
+
 function App() {
   return (
     <div className="App">
-      <h1>My Hacker Stories</h1>
-
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text"></input>
+      <Title />
+      <Search />
 
       <hr />
 
-      {list.map((item) => {
-        return (
-          <div key={item.objectID}>
-            <span><a href={item.url}>{item.title} </a></span>
-            <span>written by {item.author} </span>
-            <span>{item.num_comments} </span>
-            <span>{item.points}</span>
-          </div>
-        );
-      })}
+      <List />
 
     </div>
   );
