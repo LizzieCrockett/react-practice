@@ -1,21 +1,6 @@
 import React from 'react';
 import './App.css';
-
-
-const List = (props) => {
-  return props.list.map((item) => {
-    return (
-      <div key={item.objectID}>
-        <span><a href={item.url}>{item.title} </a></span>
-        <span>written by {item.author} </span>
-        <span>{item.num_comments} </span>
-        <span>{item.points}</span>
-      </div>
-    );
-  })
-};
-
-
+import Reddit from './components/Reddit/Reddit';
 
 
 const App = () => {
@@ -38,26 +23,52 @@ const App = () => {
     },
   ];
 
-  const [searchTerm, setSearchTerm] = React.useState('[search term not entered]');
-
-  const handleChange = (event) => {
+  const [searchTerm, setSearchTerm] = React.useState('React');
+  const handleSearch = event => {
     setSearchTerm(event.target.value);
   };
+
+  const searchedStories = stories.filter(story => story.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div>
       <h1>My Hacker Stories</h1>
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text" onChange={handleChange} />
-      <p>
-        Searching for <strong>{searchTerm}</strong>
-      </p>
+      <Search onSearch={handleSearch} />
       <hr />
-
-      <List list={stories} />
+      <List list={searchedStories} />
+      <hr />
+      <Reddit />
 
 
     </div>
   );
 }
+
+
+
+const Search = ({ handleSearch }) => {
+
+  return (
+    <div>
+      <label htmlFor="search">Search: </label>
+      <input id="search" type="text" onChange={handleSearch} />
+    </div>
+  );
+}
+
+const List = (props) => {
+  return props.list.map((item) => {
+    return (
+      <div key={item.objectID}>
+        <span><a href={item.url}>{item.title} </a></span>
+        <span>written by {item.author} </span>
+        <span>{item.num_comments} </span>
+        <span>{item.points}</span>
+      </div>
+    );
+  })
+};
+
 
 export default App;
