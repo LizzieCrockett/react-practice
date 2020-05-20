@@ -15,7 +15,7 @@ const DisplayItem = ({ image, name, price, description }) => {
             <img id="shop-item-image" src={image} alt={name} />
             <p id="item-description">{description.charAt(0).toUpperCase() + description.slice(1)}</p>
             <p>{`£${price}`}</p>
-            <button id="add-button"  onClick={addItem}>Add to cart</button>
+            <button id="add-button" onClick={addItem}>Add to cart</button>
         </div>
     )
 }
