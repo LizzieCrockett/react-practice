@@ -6,6 +6,7 @@ const HelloWorld = () => {
     return (
         <div>
             <Hello /> <World />!!!{-1+2}! 
+            <SubmitButton />
         </div>
     )
 }
@@ -19,6 +20,13 @@ const Hello = () => {
 const World = () => {
     return (
         <span>World</span>
+    )
+}
+
+const SubmitButton = () => {
+    const buttonLabel = "Submit";
+    return (
+        <button>{buttonLabel}</button>
     )
 }
 
