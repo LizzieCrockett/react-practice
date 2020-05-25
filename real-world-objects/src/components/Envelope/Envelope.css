@@ -1,0 +1,19 @@
+.wrapper {
+  width: 50vw;
+  height: 30vw;
+  border: 1px solid gray;
+
+}
+
+.topline {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.receiver {
+    display: flex;
+    justify-content: center;
+}
