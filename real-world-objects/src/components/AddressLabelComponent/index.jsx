@@ -1,7 +1,7 @@
 import React from 'react';
 import './AddressLabel.css'
 
-const AddressLabel = ({ address }) => {
+const AddressLabelComponent = ({ address }) => {
     return (
         <div className="address">
             <div className="name">{address.name}</div>
@@ -14,4 +14,4 @@ const AddressLabel = ({ address }) => {
 
 
 
-export default AddressLabel;
+export default AddressLabelComponent;

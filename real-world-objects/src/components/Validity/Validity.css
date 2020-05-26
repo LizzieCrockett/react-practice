@@ -1,0 +1,16 @@
+.validity {
+    align-self: center;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+}
+
+.validthru {
+    font-size: 12px;
+    line-height: 10px;
+    padding-top: 5px;
+}
+
+.expirydate {
+    font-size: 26px;
+}

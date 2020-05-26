@@ -1,0 +1,15 @@
+.fullnumber {
+    align-self: center;
+    padding-top: 70px;
+    font-family: 'Courier New', Courier, monospace;
+   
+}
+
+
+.longnumber {
+    font-size: 30px;
+}
+
+.littlenumber {
+    font-size: 12px;
+}

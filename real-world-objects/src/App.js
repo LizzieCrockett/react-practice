@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-import Envelope from './components/Envelope';
+import CreditCardComponent from './components/CreditCardComponent';
 
 
 
 function App() {
+ 
+
   return (
     <div className="app">
-      <Envelope />
+      <CreditCardComponent />
     </div>
   );
 }
