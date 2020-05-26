@@ -5,21 +5,16 @@ import Validity from '../Validity';
 import HolderName from '../HolderName';
 import './CreditCard.css';
 
-const user = {
-    name: "MR WILLIAM E J BIRCH",
-    expiry: '08/19',
-    card_number: "1234 5678 8765 4321",
-    bank_name: 'Big Bank Inc.'
-}
 
 
-const CreditCardComponent = () => {
+
+const CreditCardComponent = ({ userInfo }) => {
     return (
         <div className="wrapper">
-            <BankName userInfo={user} />
-            <LongNumber userInfo={user} />
-            <Validity userInfo={user} />
-            <HolderName userInfo={user} />
+            <BankName userInfo={userInfo} />
+            <LongNumber userInfo={userInfo} />
+            <Validity userInfo={userInfo} />
+            <HolderName userInfo={userInfo} />
         </div>
     )
 }
