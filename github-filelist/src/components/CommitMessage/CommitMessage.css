@@ -1,0 +1,5 @@
+.commit-message {
+    max-width: 442px;
+    padding-left: 10px;
+    overflow: hidden;
+}

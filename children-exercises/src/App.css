@@ -1,0 +1,11 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.errorbox {
+  background-color: honeydew;
+  width: 300px;
+  padding: 50px 50px 50px 50px;
+}
