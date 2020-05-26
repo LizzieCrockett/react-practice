@@ -5,21 +5,6 @@ import './Envelope.css'
 
 
 
-const senderAddress = {
-    name: 'Lizzie Crockett',
-    street: '16 Dandridge Close',
-    town: 'London',
-    postcode: 'SE10 0RP'
-}
-
-const receiverAddress = {
-    name: 'Will Birch',
-    street: 'Flat 5, 3 Recreation Road',
-    town: 'Sydenham',
-    postcode: 'SE26 4ST'
-}
-
-
 const Envelope = ({ fromPerson, toPerson }) => {
     return (
         <div className="wrapper">

@@ -1,0 +1,14 @@
+.wrapper {
+    margin: 50px 150px 50px 150px;
+    background-color: black;
+    color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+}
+
+.innercontent {
+    padding: 50px 50px 50px 50px;
+    height: 80%;
+    width: 80%;
+    align-self: center;
+}

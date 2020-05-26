@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    margin-bottom: 800px;
+}
+
+
+.checkbox {
+    height: 15px;
+    width: 40px;
+    border: 1px solid black;
+    margin: 10px
+}
+
+.logo {
+    height: 15px;
+    width: 40px;
+    margin: 10px;
+}
+
+
+.sender {
+    margin-left: -100px;
+    margin-right: 100px;
+}
+
+.subject {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.date {
+    margin-left: 100px;
+    margin-right: -100px;
+}
+
+
+.previewtext {
+    color: grey;
+    overflow: hidden;
+}
